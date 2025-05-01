@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vliegtickets verkopen als Partner</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #6eca44;
+    }
+    header {
+      background-color: white;
+      color: #6eca44;
+      padding: 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .header-inner img {
+      position: absolute;
+      left: 0;
+      height: 80px;
+    }
+    .header-inner h1 {
+      font-size: 36px;
+      font-weight: bold;
+      margin: 0;
+      text-align: center;
+      width: 100%;
+    }
+    .partner-button {
+      position: absolute;
+      right: 50px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #6eca44;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .partner-button:hover {
+      background-color: #5bb337;
+    }
+    main {
+      padding: 100px 20px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .content, .partner-page {
+      max-width: 800px;
+      text-align: left;
+    }
+    .partner-page {
+      display: none;
+    }
+    .content ul {
+      margin-bottom: 10px;
+    }
+    .highlight-wrapper {
+      background-color: white;
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+    }
+    .highlight-wrapper.green {
+      background-color: #6eca44;
+    }
+    .highlight-wrapper.green .highlight {
+      background-color: #6eca44;
+    }
+    .highlight {
+      background-color: white;
+      padding: 20px;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 800px;
+    }
+    .highlight-title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    label, select {
+      font-size: 18px;
+    }
+    select {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      padding: 8px;
+      width: 100%;
+    }
+    .button-row {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+    .back-button, .next-button {
+      background-color: white;
+      color: #6eca44;
+      border: 2px solid #6eca44;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .back-button:hover, .next-button:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <img src="https://logosandtypes.com/wp-content/uploads/2020/08/Transavia.png" alt="Transavia Logo">
+      <h1 id="main-title">Vliegtickets verkopen als Partner</h1>
+      <button class="partner-button" onclick="showPartnerPage()" id="partner-button-label">Partner Worden</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="home-page" class="content">
+
+<div class="highlight-wrapper green">
+  <div class="highlight">
+    <p class="highlight-title">Mogelijkheden</p>
+    <p>Ben je werkzaam voor een reisorganisatie én geïnteresseerd in het verkopen van onze vliegtickets? We bieden je de volgende mogelijkheden:</p>
+    <ul>
+      <li>Via een API-verbinding</li>
+      <li>Via onze Partner Portal</li>
+      <li>Via een GDS (Amadeus, Travelport en Sabre)</li>
+    </ul>
+  </div>
+</div>
+
+<div class="highlight-wrapper">
+    <div class="highlight">
+      <p class="highlight-title">Via een API-verbinding</p>
+      <p>
+        API staat voor Application Programming Interface. Dit is een verbinding die ervoor zorgt dat je website kan communiceren met ons boekingssysteem. 
+        Op deze manier kunnen klanten eenvoudig via je website onze vliegtickets en extra producten boeken. 
+        Je kunt kiezen voor een directe API-verbinding of via een technische tussenpartij.
+      </p>
+      <p>
+        <p style="text-align: left;">Geïnteresseerd? <a href="#">Meer informatie</a></p>
+      </p>
+    </div>
+  </div>
+
+  <div class="highlight-wrapper green">
+    <div class="highlight">
+      <p class="highlight-title">Via onze Partner Portal</p>
+      <p>Als reisagent kun je contact met ons opnemen voor een Partner Portal-account. Het Portal is een website speciaal voor reisagenten waarin je direct vliegtickets en extra producten boekt. In het Partner Portal heb je daarnaast de mogelijkheid om gratis 4x24H een optie op een boeking te nemen.<br><br>Geïnteresseerd? <a href="#">Meer informatie</a></p>
+    </div>
+  </div>
+
+  <div class="highlight-wrapper">
+    <div class="highlight">
+      <p class="highlight-title">Via een GDS (Amadeus, Travelport en Sabre)</p>
+      <p>Een Global Distribution System (GDS) is een systeem waarmee je real-time bij ons vliegtickets en extra producten kunt boeken. Wij werken hiervoor samen met de bedrijven Travelport (Galileo), Sabre en Amadeus. Je boekt bij ons eenvoudig én zonder papierwerk. Als de boeking geslaagd is, ontvang je per e-mail een boekingsbevestiging.</p>
+      <p>
+        <a href="#">Bekijk de Amadeus Clue Card</a><br>
+        <a href="#">Bekijk de Travelport Clue Card</a><br>
+        <a href="#">Bekijk de Sabre Clue Card</a>
+      </p>
+    </div>
+  </div>
+<div style="height: 40px;"></div>
+
+  
+    <div class="highlight-wrapper green">
+      <div class="highlight" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 200px;">
+        <p class="highlight-title" style="text-align: center;">Neem contact met ons op</p>
+        <p style="text-align: center;">Ben je werkzaam voor een reisorganisatie én geïnteresseerd in het verkopen van onze vliegtickets? Neem contact met ons op via het contactformulier.</p>
+      </div>
+    </div>
+    
+</div>
